@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>البيع - سوقنا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <span>سوقنا</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="buy.html">الشراء</a>
+                <a href="sell.html" class="active">البيع</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>اعرض منتجك للبيع</h1>
+        <p>املأ التفاصيل وسيتم نشر منتجك فوراً</p>
+    </section>
+
+    <section class="form-section">
+        <form id="sellForm" class="sell-form">
+            <div class="form-group">
+                <label><i class="fas fa-tag"></i> اسم المنتج</label>
+                <input type="text" id="productName" required placeholder="مثال: iPhone 14 Pro Max">
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label><i class="fas fa-money-bill-wave"></i> السعر</label>
+                    <input type="number" id="productPrice" required placeholder="0.00" min="0" step="0.01">
+                </div>
+                <div class="form-group">
+                    <label><i class="fas fa-coins"></i> العملة</label>
+                    <input type="text" id="productCurrency" required placeholder="مثال: ريال سعودي، USD، يورو...">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fas fa-city"></i> المدينة (اكتب اسم المدينة)</label>
+                <input type="text" id="productCity" required placeholder="مثال: الرياض، دبي، القاهرة...">
+            </div>
+
+            <div class="form-group">
+                <label><i class="fas fa-image"></i> صورة المنتج</label>
+                <div class="image-upload" onclick="document.getElementById('productImage').click()">
+                    <input type="file" id="productImage" accept="image/*" required hidden onchange="previewImage(this)">
+                    <div id="imagePreview" class="image-preview">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <p>اضغط لرفع صورة أو اسحبها هنا</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fab fa-facebook"></i> رابط حساب الفيسبوك (للتواصل)</label>
+                <input type="url" id="facebookLink" placeholder="https://facebook.com/username" pattern="https?://.*">
+                <small>سيتمكن المشترون من التواصل معك عبر هذا الرابط</small>
+            </div>
+
+            <div class="form-group">
+                <label><i class="fas fa-info-circle"></i> وصف المنتج</label>
+                <textarea id="productDescription" rows="4" placeholder="وصف تفصيلي للمنتج..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">
+                <i class="fas fa-rocket"></i>
+                <span>نشر المنتج</span>
+                <div class="btn-shine"></div>
+            </button>
+        </form>
+
+        <div id="successMessage" class="success-message hidden">
+            <i class="fas fa-check-circle"></i>
+            <h3>تم نشر المنتج بنجاح!</h3>
+            <p>سيتم مراجعته ونشره خلال لحظات</p>
+            <a href="buy.html" class="btn btn-secondary">شاهد المنتجات</a>
+        </div>
+    </section>
+
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('sellForm').addEventListener('submit', handleSellSubmit);
+    </script>
+</body>
+</html>
