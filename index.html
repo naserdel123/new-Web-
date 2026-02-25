@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>سوقنا - تسوق وبيع بكل سهولة</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Background Animation -->
+    <div class="bg-animation">
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <span>سوقنا</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">الرئيسية</a>
+                <a href="buy.html">الشراء</a>
+                <a href="sell.html">البيع</a>
+            </div>
+            <div class="nav-actions">
+                <button class="theme-toggle" onclick="toggleTheme()">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="glitch" data-text="سوقنا">سوقنا</h1>
+            <p class="hero-subtitle">منصتك الأولى للتجارة الإلكترونية في كل المدن</p>
+            <p class="hero-desc">اشتري وبيع بكل سهولة، دعم جميع العملات، واجهة عصرية</p>
+            
+            <div class="hero-buttons">
+                <a href="buy.html" class="btn btn-primary">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span>تسوق الآن</span>
+                    <div class="btn-shine"></div>
+                </a>
+                <a href="sell.html" class="btn btn-secondary">
+                    <i class="fas fa-plus-circle"></i>
+                    <span>اعرض منتجك</span>
+                </a>
+            </div>
+        </div>
+        
+        <div class="hero-stats">
+            <div class="stat-card">
+                <i class="fas fa-users"></i>
+                <h3 id="usersCount">+1000</h3>
+                <p>مستخدم نشط</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-box-open"></i>
+                <h3 id="productsCount">+500</h3>
+                <p>منتج معروض</p>
+            </div>
+            <div class="stat-card">
+                <i class="fas fa-handshake"></i>
+                <h3 id="dealsCount">+200</h3>
+                <p>صفقة ناجحة</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2 class="section-title">لماذا تختار سوقنا؟</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-globe"></i>
+                </div>
+                <h3>دعم جميع المدن</h3>
+                <p>اكتب اسم مدينتك يدوياً، لا حاجة للقوائم المحدودة</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-coins"></i>
+                </div>
+                <h3>جميع العملات</h3>
+                <p>ادعم كل عملات العالم، حدد عملتك المفضلة بنفسك</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fas fa-image"></i>
+                </div>
+                <h3>صور من الجهاز</h3>
+                <p>ارفع صور منتجاتك مباشرة من هاتفك أو كمبيوترك</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fab fa-facebook"></i>
+                </div>
+                <h3>تواصل اجتماعي</h3>
+                <p>أضف رابط فيسبوك للتواصل المباشر مع المشترين</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recent Products Preview -->
+    <section class="preview-section">
+        <h2 class="section-title">أحدث المنتجات</h2>
+        <div id="recentProducts" class="products-grid">
+            <!-- سيتم ملؤها بالجافاسكربت -->
+        </div>
+        <div class="text-center">
+            <a href="buy.html" class="btn btn-outline">عرض الكل</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <i class="fas fa-store"></i>
+                <span>سوقنا</span>
+                <p>منصة التجارة الإلكترونية الأفضل</p>
+            </div>
+            <div class="footer-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="buy.html">الشراء</a>
+                <a href="sell.html">البيع</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 سوقنا. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
