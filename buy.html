@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>الشراء - سوقنا</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="bg-circle"></div>
+        <div class="bg-circle"></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-store"></i>
+                <span>سوقنا</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">الرئيسية</a>
+                <a href="buy.html" class="active">الشراء</a>
+                <a href="sell.html">البيع</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="page-header">
+        <h1>تصفح المنتجات</h1>
+        <p>اكتشف منتجات مميزة من بائعين موثوقين</p>
+    </section>
+
+    <section class="filters-section">
+        <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="searchInput" placeholder="ابحث عن منتج...">
+        </div>
+        <div class="filter-group">
+            <input type="text" id="cityFilter" placeholder="ابحث باسم المدينة...">
+            <select id="currencyFilter">
+                <option value="">كل العملات</option>
+                <option value="SAR">ريال سعودي</option>
+                <option value="USD">دولار أمريكي</option>
+                <option value="EUR">يورو</option>
+                <option value="AED">درهم إماراتي</option>
+                <option value="KWD">دينار كويتي</option>
+                <option value="EGP">جنيه مصري</option>
+            </select>
+            <button class="btn btn-primary" onclick="applyFilters()">
+                <i class="fas fa-filter"></i> تصفية
+            </button>
+        </div>
+    </section>
+
+    <section class="products-container">
+        <div id="productsList" class="products-grid">
+            <!-- سيتم ملؤها بالجافاسكربت -->
+        </div>
+        <div id="loadingSpinner" class="loading-spinner hidden">
+            <i class="fas fa-spinner fa-spin"></i>
+        </div>
+        <div id="noResults" class="no-results hidden">
+            <i class="fas fa-box-open"></i>
+            <p>لا توجد منتجات مطابقة</p>
+        </div>
+    </section>
+
+    <!-- Product Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script>
+        // تحميل المنتجات عند فتح الصفحة
+        document.addEventListener('DOMContentLoaded', () => {
+            loadProducts();
+        });
+    </script>
+</body>
+</html>
